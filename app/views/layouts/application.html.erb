@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <meta charset="UTF-8">
-    <!-- InternetExplorerのブラウザではバージョンによって崩れることがあるので、互換表示をさせないために設定するmetaタグです。 -->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- レスポンシブWebデザインを使うために必要なmetaタグです。 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>YourFashion</title>
+    <title>Y&I style</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -24,25 +22,26 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">YourFashion</a>
+              <a class="navbar-brand" href="/pictures">Y&I style</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">ホーム<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="">マイページ<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">投稿する</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ジャンル選択 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">♬　おでかけ</a></li>
-                    <li><a href="#">♡　デート</a></li>
-                    <li><a href="#">♧　部屋着</a></li>
-                    <li><a href="#">☆　コスプレ</a></li>
-                    <li><a href="#">♢　スポーツ&アクティブ</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-music"></i>　おでかけ</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-heart"></i>　デート</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-home"></i>　部屋着</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-star-empty"></i>　コスプレ</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-fire"></i>　スポーツ&アクティブ</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-bell"></i>　浴衣、着物</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-adjust"></i>　その他</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="#">◎　オールジャンル</a></li>
-                    <li role="separator" class="divider"></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-camera"></i>　オールジャンル</a></li>
                   </ul>
                 </li>
               </ul>
@@ -53,7 +52,7 @@
                 <button type="submit" class="btn btn-default">検索</button>
               </form>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">投稿する</a></li>
+                <li><a href="#">サインアウト</a></li>
                 <li class="dropdown">
                 <a href="#"></a>
                 </li>
