@@ -45,5 +45,6 @@ group :development do
   gem 'spring'
   gem 'pry-rails'
   gem 'mechanize'
+  gem 'paperclip'
 end
 

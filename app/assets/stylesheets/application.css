@@ -14,3 +14,17 @@
  *= require_tree .
  *= require_self
  */
+
+
+.logo{
+  text-align: center;
+  font-size: 30px;
+}
+
+.logo p{
+  font-size: 14px;
+}
+
+.menu{
+  text-align: center;
+}

@@ -1,15 +1,28 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>TechReviewSite</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+   -->
 <!DOCTYPE html>
-<html lang="ja">
+<html class="pc" lang="ja" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Y&I style</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
+      <title>Y&I style</title>
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <%= csrf_meta_tags %>
+    </meta>
   </head>
-  <body>
+
+  <body class="yj950-2">
     <div class="container">
       <div class="row">
         <nav class="navbar navbar-default">
@@ -28,8 +41,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="">マイページ<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">投稿する</a></li>
+                <li><a href="/pictures/new">投稿する</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ジャンル選択 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -41,17 +53,13 @@
                     <li><a href="#"><i class="glyphicon glyphicon-bell"></i>　浴衣、着物</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-adjust"></i>　その他</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-camera"></i>　オールジャンル</a></li>
+                    <li><a href="/pictures"><i class="glyphicon glyphicon-camera"></i>　オールジャンル</a></li>
                   </ul>
                 </li>
+                <li><a href="">人気ランキング</a></li>
               </ul>
-              <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">検索</button>
-              </form>
               <ul class="nav navbar-nav navbar-right">
+                <li><a href="">マイページ</a></li>
                 <li><a href="#">サインアウト</a></li>
                 <li class="dropdown">
                 <a href="#"></a>
@@ -63,7 +71,8 @@
       </div>
     </div>
 
-  <%= yield %>
 
-  </body>
+            <%= yield %>
+
+</body>
 </html>

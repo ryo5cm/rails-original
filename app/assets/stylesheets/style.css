@@ -1,0 +1,14 @@
+body{
+  background-color: #000000;
+}
+
+#mainBox{
+  width: 95%;
+  height: 720px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.heading {
+  padding: 15px 0 0 20px;
+}

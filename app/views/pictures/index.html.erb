@@ -1,32 +1,23 @@
-<div class="index">
-  <div class="container">
-    <head class="head">
-      <h4 class="text_middle">
-        <i class="glyphicon glyphicon-camera"></i> 新着一覧
-      </h4>
-    </head>
-  </div>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
   <body>
-    <nav>
-      <div class="container">
-        <ul class="pagination">
-          <li class="disabled">
-            <a href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li>
-            <a href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
+    <div id="mainBox">
+      <div class="subBox1">
+        <p><i class="glyphicon glyphicon-bell"></i>新着コーディネート</p>
+      </div>
+      <div class="subBox2">
+        <ul class="pictures">
+          <% @pictures.each do |picture| %>
+            <li>
+            <a href="/pictures/<%= picture.id %>"><img src="<%= picture.image_url %>"></a>
+            </li>
+          <% end %>
         </ul>
       </div>
-    </nav>
+    </div>
   </body>
-</div>
+</html>
