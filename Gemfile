@@ -46,5 +46,6 @@ group :development do
   gem 'pry-rails'
   gem 'mechanize'
   gem 'paperclip'
+  gem 'devise'
 end
 

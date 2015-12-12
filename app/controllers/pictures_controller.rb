@@ -13,5 +13,13 @@ class PicturesController < ApplicationController
   end
 
   def create
+    Picture.create(picture_params)
+    redirect_to controller: :pictures, action: :index
   end
+
+  private
+  def picture_params
+    params.require(:picture).permit(:image, :comment)
+  end
+
 end

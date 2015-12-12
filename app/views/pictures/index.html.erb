@@ -13,7 +13,7 @@
         <ul class="pictures">
           <% @pictures.each do |picture| %>
             <li>
-            <a href="/pictures/<%= picture.id %>"><img src="<%= picture.image_url %>"></a>
+            <a href="/pictures/<%= picture.id %>"><img src="<%= picture.image %>"></a>
             </li>
           <% end %>
         </ul>
