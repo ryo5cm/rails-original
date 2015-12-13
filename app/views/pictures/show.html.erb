@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="application.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="mainBox">
+      <div class="subBox1">
+        <p><i class="glyphicon glyphicon-bell"></i>コーディネート情報</p>
+      </div>
+      <hr>
+      <div class="subBox2">
+          <!-- ここにUser名 -->
+        <a href="/pictures/<%= @picture.id %>"><img src="<%= @picture.image %>"></a>
+      </div>
+    </div>
+  </body>
+</html>

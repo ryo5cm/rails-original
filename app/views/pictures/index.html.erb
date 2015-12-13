@@ -1,23 +1,17 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" type="text/css">
-  </head>
   <body>
     <div id="mainBox">
       <div class="subBox1">
         <p><i class="glyphicon glyphicon-bell"></i>新着コーディネート</p>
       </div>
+      <hr>
       <div class="subBox2">
         <ul class="pictures">
           <% @pictures.each do |picture| %>
             <li>
-            <a href="/pictures/<%= picture.id %>"><img src="<%= picture.image %>"></a>
+            <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", :height => "200px", :width => "160px") %></a>
             </li>
           <% end %>
         </ul>
       </div>
     </div>
   </body>
-</html>

@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta link="style.css" rel="stylesheets" type="text/css">
+    <meta link="pictures.scss" rel="stylesheets" type="text/scss">
+    <meta link="application.css" rel="stylesheets" type="text/css">
     <meta rel="fonts" >
   </head>
   <body>
@@ -10,7 +11,7 @@
     <div class="container">
       <div class="newMainBox">
         <div class="newSubBox1">
-          <h2><i class="glyphicon glyphicon-bell"></i>投稿ページ</h2>
+          <h4><i class="glyphicon glyphicon-bell"></i>投稿ページ</h4>
         </div>
         <hr>
         <%= form_for [@picture] do |f| %>
@@ -18,9 +19,12 @@
           <ul>
             <li class="picText"><%= f.label :写真 %></li>
             <li class="pic"><%= f.file_field :image %></li>
-            <li class="text"><%= f.label :コメント %></li>
-            <p class="comment"><%= f.text_area :comment, placeholder: "コメントや服の詳細を書いてね！
-(例) アウター: ユニクロ", size: "55x10" %></p>
+            <li class="textInfo"><%= f.label :洋服情報 %></li>
+            <p class="comment"><%= f.text_area :comment, placeholder: "服のブランドや詳細を書いてね！
+(例) アウター: ユニクロ", size: "50x8" %></p>
+            <li class="textCode"><%= f.label :コーディネートのポイント %></li>
+            <p class="comment"><%= f.text_area :comment, placeholder: "コーディネートのポイントを書いてね！
+(例）色とデザインがお気に入り♬", size: "50x5" %></p>
           </ul>
         </div>
         <div class="submit">

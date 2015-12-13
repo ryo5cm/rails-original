@@ -16,15 +16,51 @@
  */
 
 
-.logo{
-  text-align: center;
-  font-size: 30px;
+body{
+  background-color: #E6E6FA;
 }
 
-.logo p{
-  font-size: 14px;
+#mainBox{
+  width: 95%;
+  height: 720px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
-.menu{
+.subBox1 p{
+  padding: 15px 0 0 20px;
+}
+
+.pictures li{
+  list-style: none;
+  float: left;
+  height: 200px;
+}
+
+.mainView{
+  margin: 0 auto;
+}
+
+.SignUpView{
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.field{
+  text-align: center;
+  margin: 20px 0 15px 0;
+}
+
+.actions{
+  margin-top: 25px;
+  text-align: center;
+}
+
+.logIn{
+  text-align: center;
+  margin-top: 8px;
+}
+
+.signUp{
+  margin: 8px 0;
 }
