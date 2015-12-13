@@ -1,37 +1,31 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta link="pictures.scss" rel="stylesheets" type="text/scss">
-    <meta link="application.css" rel="stylesheets" type="text/css">
-    <meta rel="fonts" >
-  </head>
-  <body>
+<body>
   <div class="postView">
     <div class="container">
       <div class="newMainBox">
         <div class="newSubBox1">
-          <h4><i class="glyphicon glyphicon-bell"></i>投稿ページ</h4>
+          <h4>
+            <i class="glyphicon glyphicon-bell"></i>投稿ページ
+          </h4>
         </div>
+        <div class="newSubBox2">
         <hr>
-        <%= form_for [@picture] do |f| %>
-        <div class="postPic">
-          <ul>
-            <li class="picText"><%= f.label :写真 %></li>
-            <li class="pic"><%= f.file_field :image %></li>
-            <li class="textInfo"><%= f.label :洋服情報 %></li>
-            <p class="comment"><%= f.text_area :comment, placeholder: "服のブランドや詳細を書いてね！
-(例) アウター: ユニクロ", size: "50x8" %></p>
-            <li class="textCode"><%= f.label :コーディネートのポイント %></li>
-            <p class="comment"><%= f.text_area :comment, placeholder: "コーディネートのポイントを書いてね！
-(例）色とデザインがお気に入り♬", size: "50x5" %></p>
-          </ul>
+          <%= form_for [@picture] do |f| %>
+            <div class="postPic">
+              <ul>
+                <li class="picText"><%= f.label :写真 %></li>
+                <li class="pic"><%= f.file_field :image %></li>
+                <li class="textInfo"><%= f.label :洋服情報 %></li>
+                <p class="comment"><%= f.text_area :comment, placeholder: "服のブランドや詳細を書いてね！", size: "50x8" %></p>
+                <li class="textCode"><%= f.label :コーディネートのポイント %></li>
+                <p class="comment"><%= f.text_area :comment, placeholder: "コーディネートのポイントを書いてね！
+    (例）色とデザインがお気に入り♬", size: "50x5" %></p>
+              </ul>
+            </div>
+            <div class="submit">
+              <%= f.submit "投稿する" %><i class="glyphicon glyphicon-pencil"></i>
+            </div>
+          <% end %>
         </div>
-        <div class="submit">
-          <%= f.submit "投稿する" %><i class="glyphicon glyphicon-pencil"></i>
-        </div>
-        <% end %>
       </div>
     </div>
   </body>
-</html>

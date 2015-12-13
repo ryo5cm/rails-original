@@ -17,24 +17,7 @@
 
 
 body{
-  background-color: #E6E6FA;
-}
-
-#mainBox{
-  width: 95%;
-  height: 720px;
-  margin: 0 auto;
-  background-color: #FFFFFF;
-}
-
-.subBox1 p{
-  padding: 15px 0 0 20px;
-}
-
-.pictures li{
-  list-style: none;
-  float: left;
-  height: 200px;
+  background-color: #DDDDDD;
 }
 
 .mainView{

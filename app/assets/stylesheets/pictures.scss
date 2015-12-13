@@ -7,8 +7,70 @@
 //   max-height: 250px;
 // }
 
+h2{
+  text-align: center;
+  vertical-align: top;
+}
+
+hr{
+  border-color: #000000;
+  width: 92%;
+}
+
+.indexHeadBox{
+  width: 300px;
+  margin: 0 auto;
+}
+
+.clearfix:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.indexMenBox{
+  float: left;
+  color: #FFFFFF;
+  width: 130px;
+  height: 40px;
+  background-color: #0000AA;
+}
+
+.indexWomenBox{
+  float: left;
+  color: #FFFFFF;
+  width: 130px;
+  height: 40px;
+  background-color: #AA0000;
+}
+
+#indexMainBox{
+  width: 95%;
+  height: 1300px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.indexBox1 h4{
+  padding: 20px 0 0 40px;
+}
+
+.indexBox2{
+  margin: 0 auto;
+}
+
+.pictures li{
+  list-style: none;
+  float: left;
+  height: 200px;
+}
+
 .newSubBox1{
   margin: 20px 0 0 10px;
+}
+
+.newSubBox2{
+
 }
 
 .postView{
@@ -42,6 +104,40 @@
   margin: 35px 0 0 180px;
 }
 
-.subBox2{
-  margin: 0 auto;
+.subBox1 h4{
+  padding: 20px 0 0 40px;
+}
+
+.subBox2 p{
+  margin: 20px 0 20px 40px;
+}
+
+.showText{
+  font-size: 17px;
+  text-align: left;
+  margin-left: 125px;
+}
+
+.leftInfo{
+  margin: 20px 0 0 40px;
+}
+
+.li1 p{
+  color: #000000;
+  float: left;
+}
+
+.li2 p{
+  color: #000000;
+
+}
+
+.li3 p{
+  color: #000000;
+
+}
+
+.li4 p{
+  color: #000000;
+
 }
