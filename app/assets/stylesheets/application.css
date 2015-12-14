@@ -45,7 +45,7 @@ body{
 }
 
 .actions{
-  margin-top: 25px;
+  margin: 18px;
   text-align: center;
 }
 
@@ -58,6 +58,26 @@ body{
   margin: 8px 0;
 }
 
-.SignUpView h5{
+.SignUpView h4{
   margin: 30px;
+}
+
+.SignUpView p{
+  font-size: 17px;
+}
+
+.field p{
+  font-size: 14px;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mail{
+  width: 600px;
+}
+
+.footBox p{
+  font-size: 15px;
+  text-align: center;
 }

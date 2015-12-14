@@ -1,28 +1,32 @@
-<div class="showBox1">
-  <div class="leftShowBox">
-    <div class="showBox2">
-      <h4><i class="glyphicon glyphicon-bell"></i>コーディネート情報</h4>
+<div class="container">
+  <div class="showBox1">
+    <div class="headBox clearfix">
+      <div class="leftShowBox">
+        <div class="showBox2">
+          <h4><i class="glyphicon glyphicon-bell"></i>コーディネート情報</h4>
+        </div>
+        <hr>
+        <div class="showBox3">
+          <%= image_tag("#{@picture.image}", height: "550px", width: "400px") %>
+        </div>
+        <div class="showBox4">
+          <a href="/pictures/<%= @picture.id %>/reviews/new">コメントやアドバイスを贈る</a>
+        </div>
+      </div>
+      <div class="showBox5">
+        <p>投稿者名：value1</p><br />
+        <p>投稿者コメント：value2</p><br />
+        <p>何系の服が好きか：value3</p><br />
+        <p>髪の色＆長さ：value4</p><br />
+        <p>身長＆体重：value5</p><br />
+        <p>投稿日時：value6</p><br />
+      </div>
     </div>
-    <hr>
-    <div class="showBox3">
-      <%= image_tag("#{@picture.image}", height: "550px", width: "400px") %>
+    <div class="showBox6">
+      <p>みんなからのコメントやアドバイス</p>
+      <p>---------------------------------------------</p>
+      <p>---------------------------------------------</p>
+      <p>---------------------------------------------</p>
     </div>
-    <div class="showBox4">
-      <a href="/pictures/<%= @picture.id %>/reviews/new">コメントやアドバイスを贈る</a>
-    </div>
-  </div>
-  <div class="showBox5">
-    <p>投稿者名：value1</p>
-    <p>投稿者コメント：value2</p>
-    <p>何系の服が好きか：value3</p>
-    <p>髪の色＆長さ：value4</p>
-    <p>身長＆体重：value5</p>
-    <p>投稿日時：value6</p>
-  </div>
-  <div class="showBox6">
-    <p>みんなからのコメントやアドバイス</p>
-    <p>--------------------------------</p>
-    <p>--------------------------------</p>
-    <p>--------------------------------</p>
   </div>
 </div>

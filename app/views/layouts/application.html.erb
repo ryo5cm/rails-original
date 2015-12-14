@@ -32,12 +32,14 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ジャンル選択 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#"><i class="glyphicon glyphicon-music"></i>　おでかけ＆デート</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-home"></i>　部屋着</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-star-empty"></i>　コスプレ</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-fire"></i>　スポーツ＆アクティブ</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-bell"></i>　浴衣＆着物</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-adjust"></i>　その他</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-music"></i> おでかけ＆デート</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-home"></i> 部屋着</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-star-empty"></i> コスプレ</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-fire"></i> スポーツ＆アクティブ</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-bell"></i> 浴衣＆着物</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-bell"></i> 水着</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-bell"></i> 制服＆スーツ</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-adjust"></i> その他</a></li>
                   </ul>
                 </li>
                 <li><a href="">人気ランキング</a></li>
@@ -56,6 +58,8 @@
     </div>
 
   <%= yield %>
-
+  <div class="footBox">
+    <p><%= link_to 'このサイトの説明へ', "/", method: :root %></p>
+  </div>
 </body>
 </html>

@@ -1,0 +1,66 @@
+body{
+  background-color: #CCCCCC;
+}
+
+.header_area{
+  position: fixed;
+  top:0;
+  width: 100%;
+}
+
+.navbar-brand{
+  font-size: 26px;
+}
+
+.mainView{
+  margin: 0 auto;
+}
+
+.SignUpView{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.field{
+  text-align: center;
+  margin: 20px 0 15px 0;
+}
+
+.actions{
+  margin: 18px;
+  text-align: center;
+}
+
+.logIn{
+  text-align: center;
+  margin-top: 8px;
+}
+
+.signUp{
+  margin: 8px 0;
+}
+
+.SignUpView h4{
+  margin: 30px;
+}
+
+.SignUpView p{
+  font-size: 17px;
+}
+
+.field p{
+  font-size: 14px;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footBox p{
+  font-size: 15px;
+  text-align: center;
+}
+
+.registration {
+  width: 300px;
+  height: 30px;
+}

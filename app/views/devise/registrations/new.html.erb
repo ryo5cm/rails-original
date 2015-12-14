@@ -16,24 +16,37 @@
 
         <div class="field">
           <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, placeholder: 'メールアドレスを入力' %>
-        </div>
+          <%= f.email_field :email, autofocus: true, placeholder: 'メールアドレスを入力', class: "registration" %></div>
 
         <div class="field">
           <%= f.label :password %>
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %>文字以上)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "off", placeholder: 'パスワードを入力' %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: 'パスワードを入力', class: "registration" %>
         </div>
 
         <div class="field">
           <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'パスワードを入力 ( 確認 )' %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'パスワードを入力 ( 確認 )', class: "registration" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :nickname %><br />
+          <%= f.text_field :nickname, placeholder: 'ニックネームを入力 ( 必須 )', class: "registration" %>
+        </div>
+        <div class="field">
+          <%= f.label :gender %><br />
+          <%= f.radio_button :gender, 1 %><%= f.label :gender_1, '男性' %>
+          <%= f.radio_button :gender, 2 %><%= f.label :gender_2, '女性' %>
+        </div>
+        <div class="field">
+          <p><%= f.label :profile_picture %></p><br />
+          <p><%= f.file_field :avatar %></p>
         </div>
 
         <div class="actions">
-          <%= f.submit "Sign up" %>
+          <%= f.submit "Sign up", class: "registration" %>
         </div>
       <% end %>
 

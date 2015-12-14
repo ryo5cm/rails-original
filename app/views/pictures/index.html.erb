@@ -1,26 +1,26 @@
-<div class="indexHeadBox clearfix">
-  <div class="indexMenBox">
-    <p>Men</p>
-  </div>
-  <div class="indexWomenBox">
-    <p>Women</p>
-  </div>
-</div>
-<div id="indexMainBox clearfix">
-  <div class="indexBox1">
-    <h4><i class="glyphicon glyphicon-bell"></i>新着コーディネート</h4>
-  </div>
-  <hr>
-  <div class="indexBox2">
-    <ul class="pictures">
-      <% @pictures.each do |picture| %>
-        <li>
-        <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", :height => "200px", :width => "150px") %></a>
-        </li>
-      <% end %>
-    </ul>
-    <div class="pageNation">
-      <%= paginate(@pictures) %>
+  <div class="indexHeadBox clearfix">
+    <div class="indexMenBox">
+      <p>Men</p>
+    </div>
+    <div class="indexWomenBox">
+      <p>Women</p>
     </div>
   </div>
-</div>
+  <div id="indexMainBox clearfix">
+    <div class="indexBox1">
+      <h4><i class="glyphicon glyphicon-bell"></i>新着コーディネート</h4>
+    </div>
+    <hr>
+    <div class="indexBox2 clearfix">
+      <ul class="pictures">
+        <% @pictures.each do |picture| %>
+          <li>
+          <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", :height => "200px", :width => "150px") %></a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="pageNation">
+      <p class="pageP"><%= paginate(@pictures) %></p>
+    </div>
+  </div>
