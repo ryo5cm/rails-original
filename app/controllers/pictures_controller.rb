@@ -1,7 +1,10 @@
 class PicturesController < ApplicationController
 
+  # ログインしていない時は投稿できないようにする
+  before_action :authenticate_user!, only: :new
+
   def index
-    @pictures = Picture.order("created_at DESC")
+    @pictures = Picture.page(params[:page]).per(20).order("created_at DESC")
   end
 
   def show

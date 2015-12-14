@@ -47,5 +47,6 @@ group :development do
   gem 'mechanize'
   gem 'paperclip'
   gem 'devise'
+  gem 'kaminari'
 end
 

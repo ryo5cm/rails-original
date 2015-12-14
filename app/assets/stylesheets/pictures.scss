@@ -7,9 +7,10 @@
 //   max-height: 250px;
 // }
 
-h2{
+p{
   text-align: center;
-  vertical-align: top;
+  font-size: 25px;
+  padding: 3px 0;
 }
 
 hr{
@@ -19,7 +20,7 @@ hr{
 
 .indexHeadBox{
   width: 300px;
-  margin: 0 auto;
+  margin: 17px auto;
 }
 
 .clearfix:after{
@@ -48,11 +49,10 @@ hr{
   width: 95%;
   height: 1300px;
   margin: 0 auto;
-  background-color: #FFFFFF;
 }
 
 .indexBox1 h4{
-  padding: 20px 0 0 40px;
+  padding: 20px 0 0 50px;
 }
 
 .indexBox2{
@@ -65,79 +65,98 @@ hr{
   height: 200px;
 }
 
-.newSubBox1{
-  margin: 20px 0 0 10px;
+.pageNation{
+  margin: 10px auto;
 }
 
-.newSubBox2{
 
-}
 
-.postView{
-  background-color: #FFFFFF;
-  width: 600px;
-  height: 680px;
+
+
+
+.newBox1{
   margin: 0 auto;
 }
 
-.picText{
-  margin: 20px auto 10px;
+.newBox2{
+  background-color: #FFFFFF;
+  height: 580px;
+  width: 700px;
+  margin: 25px auto;
 }
 
-.pic{
-  margin: 0 auto 30px;
+.newBox2 h4{
+  padding: 20px 0 0 25px;
 }
 
-.textInfo{
-  margin: 0 auto 15px;
+.p1{
+  margin: 30px 0 10px 35px;
+  font-size: 16px;
 }
 
-.comment{
-  margin: 0 auto 10px;
+.p2{
+  margin: 10px 0 50px 45px;
+  font-size: 16px;
 }
 
-.textCode{
-  margin: 15px auto;
+.p3{
+  margin: 30px 0 5px 35px;
+  font-size: 16px;
 }
 
-.submit{
-  margin: 35px 0 0 180px;
+.newBox3 .test{
+  margin: 10px 0 10px 25px;
+  font-size: 15px;
 }
 
-.subBox1 h4{
-  padding: 20px 0 0 40px;
+.p4{
+  margin-left: 20px;
 }
 
-.subBox2 p{
-  margin: 20px 0 20px 40px;
+.p5{
+  width: 125px;
+  margin: 25px auto;
 }
 
-.showText{
-  font-size: 17px;
-  text-align: left;
-  margin-left: 125px;
+.newSubBox{
+  background-color: #FFFFFF;
+  height: 200px;
+  width: 700px;
+  margin: 30px auto;
 }
 
-.leftInfo{
-  margin: 20px 0 0 40px;
+.p6{
+  font-size: 15px;
+  text-align: center;
+  padding: 8px;
 }
 
-.li1 p{
-  color: #000000;
+
+
+
+
+.showBox2{
+  margin: 30px 0 15px 50px;
+}
+
+.showBox3{
+  margin: 35px 20px 10px 50px;
+}
+
+.showBox4{
+  margin: 15px 0 30px 120px;
+  font-size: 20px;
+}
+
+.showBox5{
   float: left;
+  margin: 30px 15px 20px 20px;
 }
 
-.li2 p{
-  color: #000000;
-
+.showBox5 p{
+  font-size: 16px;
 }
 
-.li3 p{
-  color: #000000;
-
-}
-
-.li4 p{
-  color: #000000;
-
+.showBox6 p{
+  font-size: 16px;
 }

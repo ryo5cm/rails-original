@@ -17,7 +17,17 @@
 
 
 body{
-  background-color: #DDDDDD;
+  background-color: #CCCCCC;
+}
+
+.header_area{
+  position: fixed;
+  top:0;
+  witdh: 100%;
+}
+
+.navbar-brand{
+  font-size: 26px;
 }
 
 .mainView{
@@ -46,4 +56,8 @@ body{
 
 .signUp{
   margin: 8px 0;
+}
+
+.SignUpView h5{
+  margin: 30px;
 }
