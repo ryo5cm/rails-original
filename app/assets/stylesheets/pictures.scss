@@ -30,18 +30,20 @@ hr{
 }
 
 .indexMenBox{
-  float: left;
+  text-align: center;
+  font-size: 30px;
   color: #FFFFFF;
   width: 130px;
-  height: 40px;
+  height: 45px;
   background-color: #0000AA;
 }
 
 .indexWomenBox{
-  float: left;
+  text-align: center;
+  font-size: 30px;
   color: #FFFFFF;
   width: 130px;
-  height: 40px;
+  height: 45px;
   background-color: #AA0000;
 }
 
@@ -52,7 +54,7 @@ hr{
 }
 
 .indexBox1 h4{
-  padding: 20px 0 0 50px;
+  padding: 5px 0 0 50px;
 }
 
 .indexBox2{
@@ -66,12 +68,13 @@ hr{
   height: 200px;
 }
 
-.pageNation{
+.pagiNation{
   margin: 20px 0 75px 0;
 }
 
 .page{
   text-align: center;
+  font-size: 18px;
 }
 
 

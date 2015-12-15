@@ -1,3 +1,57 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.myBox2 h4{
+  margin: 20px 0 0 50px;
+}
+
+.table1{
+  width: 300px;
+  height: 50px;
+  margin: 30px auto;
+}
+
+.mine{
+  background-color: #000000;
+  font-size: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.favorite{
+  background-color: #FFFFFF;
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+.table2{
+  width: 250px;
+  height: 45px;
+  margin: 30px auto;
+}
+
+.men{
+  width: 125px;
+  text-align: center;
+  font-size: 24px;
+  background-color: #0000AA;
+  color: #FFFFFF;
+}
+
+.women{
+  width: 125px;
+  text-align: center;
+  font-size: 24px;
+  background-color: #AA0000;
+  color: #FFFFFF;
+}
+
+.myBox3{
+  margin: 20px;
+}
+
+.pictures{
+  margin: 0 auto;
+}
