@@ -67,15 +67,12 @@ hr{
 }
 
 .pageNation{
-  width: 400px;
-  margin: 0 auto;
+  margin: 20px 0 75px 0;
 }
 
-.pageP{
-  width: 300px;
-  margin: 10px auto;
+.page{
+  text-align: center;
 }
-
 
 
 
@@ -142,48 +139,53 @@ hr{
 
 
 
-.headBox{
-  width: 1200px;
-}
 
 .leftShowBox{
-  float: left;
-  width: 500px;
-  margin-top: 10px;
+  margin-top: 10px
 }
 
+
 .showBox2{
-  margin: 30px 0 15px 25px;
+  margin: 30px 0 15px 30px;
 }
 
 .showBox3{
-  margin: 35px 20px 10px 50px;
+
+}
+
+.userImage{
+  display: block;
+  margin: 15px auto;
 }
 
 .showBox4{
-  margin: 15px 0 30px 120px;
+  margin: 15px 0 45px 0;
+  text-align: center;
   font-size: 20px;
 }
 
 .showBox5{
+  margin-top: 35px;
+  padding-top: 1px;
   background-color: #FFFFFF;
-  float: left;
-  width: 620px;
-  height: 700px;
-  margin: 30px 15px 20px 20px;
+  height: 680px;
 }
 
-.showBox5 p{
-  margin: 15px 0 0 0;
-  background-color: #FFFFFF;
-  font-size: 16px;
+dt{
+  margin: 25px 0 8px 5px;
+}
+
+dd{
+  margin: 5px 10px 5px 30px;
 }
 
 
 .showBox6{
-  background-color: #FFFFFF;
+  margin: 30px 0 85px 0;
+  background-color: #FFFF00;
 }
 
 .showBox6 p{
+
   font-size: 16px;
 }

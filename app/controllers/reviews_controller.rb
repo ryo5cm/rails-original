@@ -9,6 +9,12 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    Review.create(create_params)
+    redirect_to controller: :pictures, action: :index
   end
 
+  private
+  def create_params
+    params.require(:review).permit(:review).merge(picture_id: params[:picture_id], user_id: current_user.id)
+  end
 end

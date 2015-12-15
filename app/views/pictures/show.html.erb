@@ -1,32 +1,39 @@
 <div class="container">
   <div class="showBox1">
-    <div class="headBox clearfix">
-      <div class="leftShowBox">
-        <div class="showBox2">
-          <h4><i class="glyphicon glyphicon-bell"></i>コーディネート情報</h4>
+    <div class="row">
+      <div class="headBox">
+        <div class="leftShowBox col-md-6">
+          <div class="showBox2">
+            <h4><i class="glyphicon glyphicon-bell"></i>コーディネート情報</h4>
+          </div>
+          <hr>
+          <div class="showBox3">
+            <%= image_tag("#{@picture.image}", height: "550px", width: "400px", class: "userImage") %>
+          </div>
+          <div class="showBox4">
+            <a href="/pictures/<%= @picture.id %>/reviews/new">コメントやアドバイスを贈る</a>
+          </div>
         </div>
-        <hr>
-        <div class="showBox3">
-          <%= image_tag("#{@picture.image}", height: "550px", width: "400px") %>
+        <div class="showBox5 col-md-6">
+          <dl>
+            <dt>・投稿者名</dt><dd>value1</dd>
+            <dt>・何系の服が好きか</dt><dd>value2</dd>
+            <dt>・髪の色＆長さ</dt><dd>value3</dd>
+            <dt>・身長＆体重</dt><dd>value4</dd>
+            <dt>・投稿者コメント</dt><dd>value5</dd>
+            <dt>・投稿日時</dt><dd>value6</dd>
+          </dl>
         </div>
-        <div class="showBox4">
-          <a href="/pictures/<%= @picture.id %>/reviews/new">コメントやアドバイスを贈る</a>
-        </div>
-      </div>
-      <div class="showBox5">
-        <p>投稿者名：value1</p><br />
-        <p>投稿者コメント：value2</p><br />
-        <p>何系の服が好きか：value3</p><br />
-        <p>髪の色＆長さ：value4</p><br />
-        <p>身長＆体重：value5</p><br />
-        <p>投稿日時：value6</p><br />
       </div>
     </div>
-    <div class="showBox6">
+  </div>
+  <div class="row">
+    <div class="showBox6 col-md-12">
       <p>みんなからのコメントやアドバイス</p>
-      <p>---------------------------------------------</p>
-      <p>---------------------------------------------</p>
-      <p>---------------------------------------------</p>
+      <p>--------------------------------------------------</p>
+      <p>--------------------------------------------------</p>
+      <p>--------------------------------------------------</p>
     </div>
   </div>
 </div>
+
