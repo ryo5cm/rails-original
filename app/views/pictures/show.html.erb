@@ -10,17 +10,17 @@
           <div class="showBox3">
             <%= image_tag("#{@picture.image}", height: "550px", width: "400px", class: "userImage") %>
           </div>
-          <div class="showBox4">
-            <a href="/pictures/<%= @picture.id %>/reviews/new">コメントやアドバイスを贈る</a>
-          </div>
+          <% unless @user.id == @picture.user_id %>
+            <div class="showBox4">
+              <a href="/pictures/<%= @picture.id %>/reviews/new">コメントやアドバイスを贈る</a>
+            </div>
+          <% end %>
         </div>
         <div class="showBox5 col-md-6">
           <dl>
-            <dt>・投稿者名</dt><dd>value1</dd>
-            <dt>・何系の服が好きか</dt><dd>value2</dd>
-            <dt>・身長＆体型</dt><dd>value3</dd>
-            <dt>・投稿者コメント</dt><dd>value4</dd>
-            <dt>・投稿日時</dt><dd>value5</dd>
+            <dt>・投稿者名</dt><dd><%= @picture.user.nickname %></dd>
+            <dt>・投稿者コメント</dt><dd><%= @picture.comment %></dd>
+            <dt>・投稿日時</dt><dd><%= @picture.created_at %></dd>
           </dl>
         </div>
       </div>
@@ -29,9 +29,6 @@
   <div class="row">
     <div class="showBox6 col-md-12">
       <p>みんなからのコメントやアドバイス</p>
-      <p>-----------------------------------------------</p>
-      <p>-----------------------------------------------</p>
-      <p>-----------------------------------------------</p>
     </div>
   </div>
 </div>

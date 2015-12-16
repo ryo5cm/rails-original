@@ -1,11 +1,15 @@
+header{
+  position: fixed;
+  width: 85%;
+}
+
 body{
   background-color: #CCCCCC;
 }
 
-.header_area{
-  position: fixed;
-  top:0;
-  width: 100%;
+.navbar{
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 .navbar-brand{
@@ -18,7 +22,7 @@ body{
 
 .SignUpView{
   text-align: center;
-  margin-bottom: 30px;
+  margin: 110px 0 25px 0;
 }
 
 .field{
@@ -53,6 +57,10 @@ body{
   width: 200px;
   text-align: center;
   margin: 0 auto;
+}
+
+.footBox{
+  margin-top: 150px;
 }
 
 .footBox p{

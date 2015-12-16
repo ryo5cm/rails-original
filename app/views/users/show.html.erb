@@ -4,27 +4,32 @@
       <h4>
         <%= image_tag("#{current_user.avatar}", height: "70px", width: "70px") %><%= @user.nickname %>さんのマイページ
       </h4>
+      <a href="/users/<%= @user.id %>/edit ">プロフィールを確認</a>
     </div>
     <hr>
-    <div class="tableBox1">
-      <table class="table1">
-        <tr>
-          <td class="mine">自分の投稿</td><td class="favorite">お気に入り</td>
-        </tr>
-      </table>
+    <div class="row">
+      <div class="tableBox1 col-md-12">
+        <table class="table1">
+          <tr>
+            <td class="mine">自分の投稿</td><td class="favorite">お気に入り</td>
+          </tr>
+        </table>
+      </div>
     </div>
     <div class="tableBox2">
+      <div class="row">
       <table class="table2">
         <tr>
           <td class="men">Men</td><td class="women">Women</td>
         </tr>
       </table>
+      </div>
     </div>
     <div class="row">
       <div class="myBox3 clearfix">
         <div class="pictures col-md-12">
           <% @pictures.each do |picture| %>
-            <li>
+            <li class="list">
               <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", height: "200px", width: "150px") %></a>
             </li>
           <% end %>
