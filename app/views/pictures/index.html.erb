@@ -6,14 +6,14 @@
       </tr>
     </table>
   </div>
-  <div id="indexMainBox">
+  <div class="indexMainBox col-md-12">
     <div class="indexBox1">
       <h4><i class="glyphicon glyphicon-camera"></i> 新着コーディネート</h4>
     </div>
     <hr>
     <div class="indexBox2 clearfix">
       <div class="row">
-        <ul class="pictures col-md-12">
+        <ul class="pictures">
           <% @pictures.each do |picture| %>
             <li>
               <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", height: "200px", width: "150px") %></a>

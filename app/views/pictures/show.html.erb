@@ -4,7 +4,7 @@
       <div class="headBox">
         <div class="leftShowBox col-md-6">
           <div class="showBox2">
-            <h4><i class="glyphicon glyphicon-bell"></i> コーディネート情報</h4>
+            <h4><i class="glyphicon glyphicon-picture"></i> コーディネート情報</h4>
           </div>
           <hr>
           <div class="showBox3">
@@ -24,15 +24,24 @@
         </div>
         <div class="showBox5 col-md-6">
           <dl>
-            <dt>・投稿者名</dt><dd><%= @picture.user.nickname %></dd>
-            <dt>・投稿者コメント</dt><dd><%= @picture.comment %></dd>
-            <dt>・投稿日時</dt><dd><%= @picture.created_at %></dd>
+            <dt class="text-danger"><i class="glyphicon glyphicon-user"></i> 投稿者名</dt>
+              <dd><%= @picture.user.nickname %></dd>
+            <dt class="text-success"><i class="glyphicon glyphicon-th-large"></i> 性別</dt>
+              <% if @picture.user.gender == 1 %>
+                <dd>男性 <i class="glyphicon glyphicon-sunglasses"></i></dd>
+              <% else %>
+                <dd>女性 <i class="glyphicon glyphicon-heart-empty"></i></dd>
+              <% end %>
+            <dt class="text-info"><i class="glyphicon glyphicon-comment"></i> 投稿者コメント</dt>
+              <dd><%= @picture.comment %></dd>
+            <dt class="text-muted"><i class="glyphicon glyphicon-paperclip"></i> 投稿日時</dt>
+              <dd><%= @picture.created_at.strftime('%Y/%m/%d %H:%M') %></dd>
           </dl>
         </div>
       </div>
     </div>
   </div>
   <div class="showBox6">
-    <p class="text-center">みんなからのコメントやアドバイス</p>
+    <p class="text-center text-warning"><i class="glyphicon glyphicon-comment"></i> みんなからのコメントやアドバイス</p>
   </div>
 </div>

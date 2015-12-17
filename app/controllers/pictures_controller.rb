@@ -5,7 +5,7 @@ class PicturesController < ApplicationController
 
   # リクエストパラメータで指定されたページ番号 ( params[:page] ) を指定する
   def index
-    @pictures = Picture.page(params[:page]).per(20).order("created_at DESC")
+    @pictures = Picture.page(params[:page]).per(100).order("created_at DESC")
   end
 
   def show

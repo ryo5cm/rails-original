@@ -2,6 +2,10 @@ body{
   background-color: #CCCCCC;
 }
 
+p{
+  font-size: 19px;
+}
+
 .navbar{
   background-color: #000000;
   color: #FFFFFF;
@@ -60,7 +64,7 @@ body{
 }
 
 .footBox{
-  margin-top: 150px;
+  margin-top: 120px;
 }
 
 .footBox p{
