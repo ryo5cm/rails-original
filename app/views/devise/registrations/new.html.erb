@@ -16,14 +16,14 @@
 
         <div class="field">
           <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, placeholder: 'メールアドレスを入力', class: "registration" %></div>
+          <%= f.email_field :email, autofocus: true, placeholder: 'メールアドレスを入力 ( 必須 )', class: "registration" %></div>
 
         <div class="field">
           <%= f.label :password %>
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %>文字以上)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "off", placeholder: 'パスワードを入力', class: "registration" %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: 'パスワードを入力 ( 必須 )', class: "registration" %>
         </div>
 
         <div class="field">

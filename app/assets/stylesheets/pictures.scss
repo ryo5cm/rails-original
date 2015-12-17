@@ -7,16 +7,6 @@
 //   max-height: 250px;
 // }
 
-p{
-  text-align: center;
-  font-size: 25px;
-  padding: 3px 0;
-}
-
-hr{
-  border-color: #000000;
-  width: 92%;
-}
 
 .indexHeadBox{
   width: 300px;
@@ -33,24 +23,40 @@ hr{
 .indexMenBox{
   text-align: center;
   font-size: 30px;
-  color: #FFFFFF;
   width: 130px;
   height: 45px;
   background-color: #0000AA;
 }
 
+.indexMenBox a{
+  color: #FFFFFF;
+}
+
+.indexMenBox a:hover {/*マウスをのせたとき*/
+  color: #00FF00;
+  text-decoration:underline;
+}
+
 .indexWomenBox{
   text-align: center;
   font-size: 30px;
-  color: #FFFFFF;
   width: 130px;
   height: 45px;
   background-color: #AA0000;
 }
 
+.indexWomenBox a{
+  color: #FFFFFF;
+}
+
+.indexWomenBox a:hover {/*マウスをのせたとき*/
+  color: #00FF00;
+  text-decoration:underline;
+}
+
 #indexMainBox{
   width: 95%;
-  height: 1300px;
+  min-height: 600px;
   margin: 0 auto;
 }
 
@@ -88,7 +94,7 @@ hr{
 
 .newBox2{
   background-color: #FFFFFF;
-  height: 580px;
+  min-height: 630px;
   width: 700px;
   margin: 25px auto;
 }
@@ -98,7 +104,7 @@ hr{
 }
 
 .p1{
-  margin: 30px 0 10px 35px;
+  margin: 50px 0 10px 35px;
   font-size: 16px;
 }
 
@@ -123,8 +129,8 @@ hr{
 }
 
 .p5{
-  width: 100px;
-  margin: 25px auto;
+  width: 150px;
+  height: 30px;
 }
 
 .newSubBox{
@@ -147,6 +153,10 @@ hr{
 
 .showBox1{
   margin-top: 110px;
+}
+
+.headBox{
+  width: 96%;
 }
 
 .leftShowBox{
@@ -183,7 +193,6 @@ dt{
 dd{
   margin: 5px 10px 5px 30px;
 }
-
 
 .showBox6{
   margin: 30px 0 85px 0;

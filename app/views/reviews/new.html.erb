@@ -2,23 +2,20 @@
   <div class="newBox1">
     <div class="newBox2">
       <h4>
-        <i class="glyphicon glyphicon-bell"></i>プレゼント投稿ページ
+        <i class="glyphicon glyphicon-bell"></i> プレゼント投稿ページ
       </h4>
       <hr>
       <div class="newBox3">
         <%= form_for [@picture, @review] do |f| %>
-        <div class="p3"><i class="glyphicon glyphicon-pencil"></i><%= f.label :コメント＆アドバイス %>
+        <div class="p3 text-left"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :コメント＆アドバイス %>
         </div>
         <div class="p4"><%= f.text_area :review, placeholder: "コメントやアドバイス ( 例. 靴は黒色の方が合うと思う。)を書いてね！", size: "70x10", class: "test" %>
         </div>
         <div class="p5">
-          <%= f.submit "プレゼントする" %>
+          <p class="text-center"><%= f.submit "プレゼントする" %></p>
         </div>
         <% end %>
       </div>
-    </div>
-    <div class="newSubBox">
-      <div class="p6"><i class="glyphicon glyphicon-bell"></i>人気ランキング</div>
     </div>
   </div>
 </div>

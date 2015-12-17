@@ -10,11 +10,11 @@
   margin: 20px 0 -20px 50px;
 }
 
-.myBox2 a{
+.myBox2 p{
   font-size: 15px;
   display: block;
   text-align: right;
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 .table1{
@@ -63,3 +63,45 @@
   margin: 40px auto;
 }
 
+.men a{
+  color: #FFFFFF;
+}
+
+.men a:hover {/*マウスをのせたとき*/
+  color: #00FF00;
+  text-decoration:underline;
+}
+
+.women a{
+  color: #FFFFFF;
+}
+
+.women a:hover {/*マウスをのせたとき*/
+  color: #00FF00;
+  text-decoration:underline;
+}
+
+
+
+
+
+.editBox1{
+  margin-top: 110px;
+}
+
+.editBox2{
+  margin-top: 20px;
+  background-color: #FFFFFF;
+  min-height: 700px;
+}
+
+.profile{
+  display: block;
+  padding-top: 20px;
+  margin: 15px auto;
+}
+
+.editBox4{
+  text-align: center;
+  font-size: 20px;
+}

@@ -4,13 +4,19 @@
       <div class="headBox">
         <div class="leftShowBox col-md-6">
           <div class="showBox2">
-            <h4><i class="glyphicon glyphicon-bell"></i>コーディネート情報</h4>
+            <h4><i class="glyphicon glyphicon-bell"></i> コーディネート情報</h4>
           </div>
           <hr>
           <div class="showBox3">
             <%= image_tag("#{@picture.image}", height: "550px", width: "400px", class: "userImage") %>
           </div>
-          <% unless @user.id == @picture.user_id %>
+          <% if user_signed_in? %>
+            <% unless @user.id == @picture.user_id %>
+              <div class="showBox4">
+                <a href="/pictures/<%= @picture.id %>/reviews/new">コメントやアドバイスを贈る</a>
+              </div>
+            <% end %>
+          <% else %>
             <div class="showBox4">
               <a href="/pictures/<%= @picture.id %>/reviews/new">コメントやアドバイスを贈る</a>
             </div>
@@ -26,9 +32,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="showBox6 col-md-12">
-      <p>みんなからのコメントやアドバイス</p>
-    </div>
+  <div class="showBox6">
+    <p class="text-center">みんなからのコメントやアドバイス</p>
   </div>
 </div>

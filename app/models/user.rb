@@ -13,4 +13,5 @@ class User < ActiveRecord::Base
   has_many :reviews
   has_many :pictures
 
+  validates :nickname, :email, :password, :gender, presence: true
 end

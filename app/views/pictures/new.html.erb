@@ -3,30 +3,25 @@
     <div class="newBox1">
       <div class="newBox2">
         <h4>
-          <i class="glyphicon glyphicon-bell"></i>投稿ページ
+          <i class="glyphicon glyphicon-bell"></i> 投稿ページ
         </h4>
         <hr>
         <div class="newBox3">
           <%= form_for [@picture] do |f| %>
-          <div class="p1"><i class="glyphicon glyphicon-pencil"></i><%= f.label :写真 %>
+          <div class="p1"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :写真 %>
           </div>
           <div class="p2">
             <%= f.file_field :image %>
           </div>
-          <div class="p3"><i class="glyphicon glyphicon-pencil"></i><%= f.label :コーディネートのポイント %>
+          <div class="p3"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :コーディネートのポイント %>
           </div>
           <div class="p4"><%= f.text_area :comment, placeholder: "コーディネートのポイントを書いてね！
 (例). モノトーンで大人っぽくしました♬", size: "70x10", class: "test" %>
           </div>
           <div class="p5">
-            <%= f.submit "投稿する" %>
+            <p class="text-center"><%= f.submit "投稿する" %></p>
           </div>
           <% end %>
-        </div>
-      </div>
-      <div class="newSubBox">
-        <div class="p6">
-          <i class="glyphicon glyphicon-bell"></i>人気ランキング
         </div>
       </div>
     </div>

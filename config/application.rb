@@ -23,5 +23,6 @@ module MyCoordinate
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.precompile += %w(*.eot *.svg *.ttf *.woff)
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end

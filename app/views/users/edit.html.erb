@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="editBox1">
+    <div>
+      <p><%= @user.nickname %>さんのプロフィール</p>
+    </div>
+    <hr class="normal">
+    <div class="editBox2">
+      <div class="editBox3">
+        <%= image_tag("#{@user.avatar}", height: "300px", width: "300px", class: "profile") %>
+      </div>
+      <div class="editBox4">
+        <p class="text-center text-danger">< お名前 ></p>
+        <p class="text-center"><%= @user.nickname %></p>
+      </div>
+      <div class="edEitBox5">
+        <p class="text-center text-danger">< 性別 ></p>
+        <% if @user.gender == 1 %>
+          <p class="text-center">男性</p>
+        <% else %>
+          <p class="text-center">女性</p>
+        <% end %>
+      </div>
+      <div class="editBox6">
+        <p class="text-center text-danger">< メールアドレス ></p>
+        <p class="text-center"><%= @user.email %></p>
+      </div>
+      <div class="editBox7">
+        <p class="text-center text-danger">< パスワード ></p>
+        <p class="text-center"><%= @user.encrypted_password %></p>
+      </div>
+    </div>
+  </div>
+</div>

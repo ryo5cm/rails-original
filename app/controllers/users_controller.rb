@@ -6,8 +6,10 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = current_user
   end
 
   def update
+    redirect_to controller: :pictures, action: :index
   end
 end
