@@ -8,6 +8,14 @@ class PicturesController < ApplicationController
     @pictures = Picture.page(params[:page]).per(100).order("created_at DESC")
   end
 
+  def men
+    @men = Picture.page(params[:page]).per(100).where(gender: 1).order('created_at DESC')
+  end
+
+  def women
+    @women = Picture.page(params[:page]).per(100).where(gender: 2).order('created_at DESC')
+  end
+
   def show
     @picture = Picture.find(params[:id])
     @user = current_user
