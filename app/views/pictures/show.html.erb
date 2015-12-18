@@ -42,6 +42,17 @@
     </div>
   </div>
   <div class="showBox6">
-    <p class="text-center text-warning"><i class="glyphicon glyphicon-comment"></i> みんなからのコメントやアドバイス</p>
+    <h5 class="text-center text-warning"><i class="glyphicon glyphicon-comment"></i> みんなからのコメントやアドバイス</h5>
+    <% @picture.reviews.each do |review| %>
+      <ul class="review clearfix">
+        <% if @user.gender == 1 %>
+          <li><p class="text-info"><%= review.user.nickname %></p></li>
+        <% else %>
+          <li><p class="text-danger"><%= review.user.nickname %></p></li>
+        <% end %>
+        <li class="userReview text-center"><%= review.review %></li>
+      </ul>
+      <hr>
+    <% end %>
   </div>
 </div>

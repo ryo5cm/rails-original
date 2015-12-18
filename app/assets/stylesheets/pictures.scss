@@ -192,10 +192,32 @@ dd{
 .showBox6{
   margin: 30px 0 85px 0;
   background-color: #FFFFFF;
-  min-height: 200px;
+  min-height: 300px;
 }
 
-.showBox6 p{
+.showBox6 h5{
   font-size: 16px;
   padding-top: 15px;
+}
+
+.review li{
+  list-style: none;
+  float: left;
+}
+
+.review p{
+  font-size: 15px;
+}
+
+.userReview{
+  margin-left: 15px;
+  min-width: 230px;
+  min-height: 25px;
+  border: 2px #000000 solid;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+.review hr{
+  padding: 30px;
 }
