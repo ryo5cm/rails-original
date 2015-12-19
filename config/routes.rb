@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit, :update]
   resources :ranking, only: :index
+  resources :genre, only: :index
 
   resources :pictures, only: [:index, :show, :new, :create, :destroy] do
     resources :reviews, only: [:new, :create]

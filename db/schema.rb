@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151218120308) do
+ActiveRecord::Schema.define(version: 20151219124147) do
+
+  create_table "genres", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pictures", force: :cascade do |t|
     t.string   "comment",            limit: 255
@@ -24,6 +30,7 @@ ActiveRecord::Schema.define(version: 20151218120308) do
     t.text     "image",              limit: 65535
     t.integer  "user_id",            limit: 4
     t.integer  "gender",             limit: 4
+    t.integer  "genre_id",           limit: 4
   end
 
   create_table "reviews", force: :cascade do |t|

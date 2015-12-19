@@ -2,6 +2,7 @@ class Picture < ActiveRecord::Base
 
   has_many :reviews
   belongs_to :user
+  belongs_to :genre
 
   has_attached_file :image,
         styles: { medium: "100x100#", thumb: "100x100#" }
