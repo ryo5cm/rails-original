@@ -2,7 +2,8 @@
   <div class="indexHeadBox">
     <table class="table">
       <tr>
-        <td class="indexMenBox"><a href="/gender/men">Men</a></td><td class="indexWomenBox"><a href="/gender/women">Women</a></td>
+        <!-- Menのlinkが押されたら、ルーティングのprefixに_pathをつけたアクションにgender(任意)の値をparamsで送る -->
+        <td class="indexMenBox"><%= link_to "Men", pictures_path(gender: 1) %></td><td class="indexWomenBox"><%= link_to "Women", pictures_path(gender: 2) %></td>
       </tr>
     </table>
   </div>

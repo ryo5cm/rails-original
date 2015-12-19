@@ -11,14 +11,18 @@
             <%= image_tag("#{@picture.image}", height: "550px", width: "400px", class: "userImage") %>
           </div>
           <% if user_signed_in? %>
-            <% unless @user.id == @picture.user_id %>
+            <% if @user.id == @picture.user_id %>
               <div class="showBox4">
-                <a href="/pictures/<%= @picture.id %>/reviews/new">コメントやアドバイスを贈る</a>
+                <%= link_to "削除する", picture_path(:delete) %>
+              </div>
+            <% else %>
+              <div class="showBox4">
+              <%= link_to "コメントやアドバイスを贈る", new_picture_review_path(@picture) %>
               </div>
             <% end %>
           <% else %>
             <div class="showBox4">
-              <a href="/pictures/<%= @picture.id %>/reviews/new">コメントやアドバイスを贈る</a>
+              <%= link_to "コメントやアドバイスを贈る", new_picture_review_path(@picture) %>
             </div>
           <% end %>
         </div>

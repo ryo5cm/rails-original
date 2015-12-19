@@ -5,15 +5,11 @@ class PicturesController < ApplicationController
 
   # リクエストパラメータで指定されたページ番号 ( params[:page] ) を指定する
   def index
-    @pictures = Picture.page(params[:page]).per(100).order("created_at DESC")
-  end
-
-  def men
-    @men = Picture.page(params[:page]).per(100).where(gender: 1).order('created_at DESC')
-  end
-
-  def women
-    @women = Picture.page(params[:page]).per(100).where(gender: 2).order('created_at DESC')
+    if params[:gender].present?
+      @pictures = Picture.page(params[:page]).per(100).where(gender: params[:gender]).order("created_at DESC")
+    else
+      @pictures = Picture.page(params[:page]).per(100).order("created_at DESC")
+    end
   end
 
   def show
@@ -33,6 +29,11 @@ class PicturesController < ApplicationController
   private
   def picture_params
     params.require(:picture).permit(:image, :comment)
+  end
+
+  def destroy
+    picture = Picture.find(params[:id])
+    picture.destroy
   end
 
 end

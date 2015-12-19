@@ -2,7 +2,7 @@
   <div class="indexHeadBox">
     <table class="table">
       <tr>
-        <td class="indexMenBox selected"><a href="">Men</a></td><td class="indexWomenBox"><a href="">Women</a></td>
+        <td class="indexMenBox selected"><%= link_to "Men", ranking_index_path(gender: 1) %></td><td class="indexWomenBox"><%= link_to "Women", ranking_index_path(gender: 2) %></td>
       </tr>
     </table>
   </div>
@@ -14,20 +14,37 @@
     <div class="indexBox2 clearfix">
       <div class="row">
         <ul class="pictures">
-          <% @ranking.each.with_index(1) do |picture, i| %>
-            <div class="box__cell w40 align-center">
-              <li>
-                <p class="number"><i class="glyphicon glyphicon-king"></i> <%= i %></p>
-                <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", height: "200px", width: "150px") %></a>
-              </li>
-            </div>
-          <% end %>
+            <% if @gender %>
+              <% if @gender == 1 %>
+              <% @men.each.with_index(1) do |picture, i| %>
+              <div class="box__cell w40 align-center">
+                <li class="rankPic">
+                  <p class="number"><i class="glyphicon glyphicon-king"></i> <%= i %></p>
+                  <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", height: "200px", width: "150px") %></a>
+                </li>
+              </div>
+              <% end %>
+              <% else %>
+              <% @women.each.with_index(1) do |picture, i| %>
+              <div class="box__cell w40 align-center">
+                <li class="rankPic">
+                  <p class="number"><i class="glyphicon glyphicon-king"></i> <%= i %></p>
+                  <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", height: "200px", width: "150px") %></a>
+                </li>
+              </div>
+              <% end %>
+              <% end %>
+            <% else %>
+            <% @ranking.each.with_index(1) do |picture, i| %>
+              <div class="box__cell w40 align-center">
+                <li class="rankPic">
+                  <p class="number"><i class="glyphicon glyphicon-king"></i> <%= i %></p>
+                  <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", height: "200px", width: "150px") %></a>
+                </li>
+              </div>
+            <% end %>
+            <% end %>
         </ul>
-      </div>
-    </div>
-    <div class="pagiNation row">
-      <div class="page col-md-12">
-        <%= paginate(@ranking) %>
       </div>
     </div>
   </div>
