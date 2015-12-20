@@ -8,30 +8,26 @@
         <hr>
         <div class="newBox3">
           <%= form_for [@picture] do |f| %>
-          <div class="p1"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :写真 %>
-          </div>
-          <div class="p2">
-            <%= f.file_field :image %>
-          </div>
-          <div class="p1"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :ジャンル %>
-          </div>
-          <div class="p4">
-            <%= f.radio_button :genre, 1 %>　<%= f.label :genre_1, 'おでかけ＆デート' %><br />
-            <%= f.radio_button :genre, 2 %>　<%= f.label :genre_2, '部屋着' %><br />
-            <%= f.radio_button :genre, 3 %>　<%= f.label :genre_3, 'コスプレ' %><br />
-            <%= f.radio_button :genre, 4 %>　<%= f.label :genre_4, 'スポーツ＆アクティブ' %><br />
-            <%= f.radio_button :genre, 5 %>　<%= f.label :genre_5, '浴衣＆着物' %><br />
-            <%= f.radio_button :genre, 6 %>　<%= f.label :genre_5, '制服＆スーツ' %><br />
-            <%= f.radio_button :genre, 7 %>　<%= f.label :genre_7, 'その他' %>
-          </div>
-          <div class="p3"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :コーディネートのポイント %>
-          </div>
-          <div class="p4"><%= f.text_area :comment, placeholder: "コーディネートのポイントを書いてね！
+            <div class="p1"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :写真 %>
+            </div>
+            <div class="p2">
+              <%= f.file_field :image %>
+            </div>
+            <div class="p1"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :ジャンル %>
+            </div>
+            <div class="p4">
+              <% @genre.each.with_index(1) do |genre, i| %>
+                <%= f.radio_button :genre, i %>　<%= f.label :genre_i, "#{genre.name}" %><br />
+              <% end %>
+            </div>
+            <div class="p3"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :コーディネートのポイント %>
+            </div>
+            <div class="p4"><%= f.text_area :comment, placeholder: "コーディネートのポイントを書いてね！
 (例). モノトーンで大人っぽくしました♬", size: "70x10", class: "test" %>
-          </div>
-          <div class="p5">
-            <p class="text-center"><%= f.submit "投稿する" %></p>
-          </div>
+            </div>
+            <div class="p5">
+              <p class="text-center"><%= f.submit "投稿する" %></p>
+            </div>
           <% end %>
         </div>
       </div>

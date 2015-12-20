@@ -3,7 +3,7 @@
     <table class="table">
       <tr>
         <!-- Menのlinkが押されたら、ルーティングのprefixに_pathをつけたアクションにgender(任意)の値をparamsで送る -->
-        <td class="indexMenBox"><%= link_to "Men", ranking_index_path(gender: 1) %></td><td class="indexWomenBox"><%= link_to "Women", ranking_index_path(gender: 2) %></td>
+        <td class="indexMenBox"><%= link_to "Men", genre_index_path(gender: 1) %></td><td class="indexWomenBox"><%= link_to "Women", genre_index_path(gender: 2) %></td>
       </tr>
     </table>
   </div>

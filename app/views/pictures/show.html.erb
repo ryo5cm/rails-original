@@ -36,6 +36,8 @@
               <% else %>
                 <dd>女性 <i class="glyphicon glyphicon-heart-empty"></i></dd>
               <% end %>
+              <dt class="text-warning"><i class="glyphicon glyphicon-th-list"></i> ジャンル</dt>
+                <dd><%= @picture.genre_id %></dd>
             <dt class="text-info"><i class="glyphicon glyphicon-comment"></i> 投稿者コメント</dt>
               <dd><%= @picture.comment %></dd>
             <dt class="text-muted"><i class="glyphicon glyphicon-paperclip"></i> 投稿日時</dt>
