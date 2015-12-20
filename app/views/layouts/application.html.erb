@@ -32,7 +32,7 @@
               <ul class="dropdown-menu">
                 <% @genre.each.with_index(1) do |genre, i| %>
                   <li>
-                    <%= link_to "#{genre.name}", pictures_path %>
+                    <%= link_to "#{genre.name}", pictures_path(genre_id: i) %>
                   </li>
                 <% end %>
               </ul>

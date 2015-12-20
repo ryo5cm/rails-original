@@ -7,6 +7,8 @@ class PicturesController < ApplicationController
   def index
     if params[:gender].present?
       @pictures = Picture.page(params[:page]).per(100).where(gender: params[:gender]).order("created_at DESC")
+    elsif params[:genre_id].present?
+      @pictures = Picture.page(params[:page]).per(100).where(genre_id: params[:genre_id]).order("created_at DESC")
     else
       @pictures = Picture.page(params[:page]).per(100).order("created_at DESC")
     end
