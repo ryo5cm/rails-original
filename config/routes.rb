@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'pictures#index'
 
   resources :users, only: [:show, :edit, :update]
-  resources :ranking, only: :index
+  resources :ranking, only: [:index, :show]
   resources :genre, only: :index
 
   resources :pictures, only: [:index, :show, :new, :create, :destroy] do

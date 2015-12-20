@@ -12,8 +12,14 @@ class ApplicationController < ActionController::Base
   # devise_parameter_sanitizerメソッドはdeviseで追加されたメソッドなので、Deviseのコントローラ以外で呼び出すことができない。deviseコントローラーのアクションが動いた時のみ、configure_permitted_parametersを動かす処理を書く。
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  before_action :setting_genre
+
   # サインアップ時に、nicknmameとavatarというキーを許可する
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up).push(:nickname, :avatar, :gender)
+  end
+
+  def setting_genre
+    @genre = Genre.all
   end
 end

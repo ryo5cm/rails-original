@@ -30,13 +30,11 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ジャンル選択 <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#"><i class="glyphicon glyphicon-music"></i> おでかけ＆デート</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-home"></i> 部屋着</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-star-empty"></i> コスプレ</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-fire"></i> スポーツ＆アクティブ</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-bell"></i> 浴衣＆着物</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-briefcase"></i> 制服＆スーツ</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-adjust"></i> その他</a></li>
+                <% @genre.each.with_index(1) do |genre, i| %>
+                  <li>
+                    <%= link_to "#{genre.name}", pictures_path %>
+                  </li>
+                <% end %>
               </ul>
             </li>
             <li><%= link_to "ランキング", ranking_index_path %></li>
