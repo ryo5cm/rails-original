@@ -1,0 +1,14 @@
+<div class="box__cell w40 align-center">
+  <li class="rankPic">
+    <p class="number"><i class="glyphicon glyphicon-king"></i> <%= i %></p>
+    <a href="/pictures/<%= ranking.id %>"><%= image_tag("#{ranking.image}", height: "200px", width: "150px") %></a>
+  </li>
+    <%= %>
+</div>
+
+
+<% @humen.each.with_index(1) do |human, n| %>
+  <% if human.id == ranking.id %>
+    <% i= n %>
+  <% end %>
+<% end %>
