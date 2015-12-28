@@ -2,9 +2,15 @@
   <div class="newView">
     <div class="newBox1">
       <div class="newBox2">
-        <h4>
-          <i class="glyphicon glyphicon-bell"></i> 投稿ページ
-        </h4>
+        <% if @picture.errors.any? %>
+          <div class="error">
+            <h3 class="text-center"><%= @picture.errors.count %>件のエラーがあります。</h3>
+              <% @picture.errors.full_messages.each do |message| %>
+                <p class="text-center">・ <%= message %></p><br />
+              <% end %>
+          </div>
+        <% end %>
+        <h4><i class="glyphicon glyphicon-bell"></i> 投稿ページ</h4>
         <hr>
         <div class="newBox3">
           <%= form_for [@picture] do |f| %>

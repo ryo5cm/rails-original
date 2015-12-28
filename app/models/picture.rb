@@ -10,8 +10,8 @@ class Picture < ActiveRecord::Base
   validates_attachment_content_type :image,
         content_type: ["image/jpeg", "image/png"]
 
-  validates :image, presence :true
-  validates :genre_id, presence :true
-  validates :comment, presence :true, length: { maximum: 500}
+  validates :image, presence: true
+  validates :genre_id, presence: true
+  validates :comment, presence: true, length: { maximum: 500 }
 
 end
