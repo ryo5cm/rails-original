@@ -24,8 +24,11 @@ class PicturesController < ApplicationController
   end
 
   def create
-    Picture.create(picture_params)
-    redirect_to controller: :pictures, action: :index
+    if Picture.create(picture_params)
+      redirect_to controller: :pictures, action: :index
+    else
+      render :new
+    end
   end
 
   private
