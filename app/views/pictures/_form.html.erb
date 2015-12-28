@@ -1,0 +1,22 @@
+<%= form_for [@picture] do |f| %>
+  <div class="p1"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :写真 %>
+  </div>
+  <div class="p2">
+    <%= f.file_field :image %>
+  </div>
+  <div class="p1"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :ジャンル %>
+  </div>
+  <div class="p4">
+    <% @genre.each.with_index(1) do |genre, i| %>
+      <%= f.radio_button :genre_id, i %>　<%= f.label :"#{genre.name}" %><br />
+    <% end %>
+  </div>
+  <div class="p3"><i class="glyphicon glyphicon-pencil"></i> <%= f.label :コーディネートのポイント %>
+  </div>
+  <div class="p4"><%= f.text_area :comment, placeholder: "コーディネートのポイントを書いてね！
+(例). モノトーンで大人っぽくしました♬", size: "70x10", class: "test" %>
+  </div>
+  <div class="p5">
+    <p class="text-center"><%= f.submit "投稿する" %></p>
+  </div>
+<% end %>

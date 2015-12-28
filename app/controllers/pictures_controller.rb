@@ -1,7 +1,8 @@
 class PicturesController < ApplicationController
 
   # ログインしていない時は投稿できないようにする
-  before_action :authenticate_user!, only: :new
+  before_action :authenticate_user!, only:[:new, :edit]
+  before_action :set_picture, only:[:show, :edit]
 
   # リクエストパラメータで指定されたページ番号 ( params[:page] ) を指定する
   def index
@@ -15,8 +16,7 @@ class PicturesController < ApplicationController
   end
 
   def show
-    @picture = Picture.find(params[:id])
-    @user = current_user
+
   end
 
   def new
@@ -32,8 +32,19 @@ class PicturesController < ApplicationController
     end
   end
 
+  def update
+    @picture.image = params[:picture][:image]
+    @picture.comment = params[:picture][:comment]
+    @picture.save
+    redirect_to picture_path(@picture.id)
+  end
+
 
   private
+
+  def set_picture
+    @picture = Picture.find(params[:id])
+  end
 
   def picture_params
     params.require(:picture).permit(:image, :comment)

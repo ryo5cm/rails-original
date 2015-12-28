@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :ranking, only: [:index, :show]
   resources :genre, only: :index
 
-  resources :pictures, only: [:index, :show, :new, :create, :destroy] do
+  resources :pictures, only: [:index, :show, :new, :create, :update, :destroy] do
     resources :reviews, only: [:new, :create]
   end
 
