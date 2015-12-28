@@ -26,7 +26,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.create(picture_params)
     if @picture.save
-      redirect_to pictures_path
+      redirect_to pictures_path, notice: "投稿が保存されました。"
     else
       render :new
     end
