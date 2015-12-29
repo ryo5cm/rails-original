@@ -32,13 +32,21 @@ class PicturesController < ApplicationController
     end
   end
 
-  def update
-    @picture.image = params[:picture][:image]
-    @picture.comment = params[:picture][:comment]
-    @picture.save
-    redirect_to picture_path(@picture.id)
+  def edit
   end
 
+  def update
+    if @picture.update(picture_params)
+      redirect_to @picture, notice: "投稿が更新されました"
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    picture = Picture.find(params[:id])
+    picture.destroy
+  end
 
   private
 
@@ -48,11 +56,6 @@ class PicturesController < ApplicationController
 
   def picture_params
     params.require(:picture).permit(:image, :comment)
-  end
-
-  def destroy
-    picture = Picture.find(params[:id])
-    picture.destroy
   end
 
 end
