@@ -1,20 +1,20 @@
 <div class="container">
   <div class="editBox1">
     <div>
-      <p><i class="glyphicon glyphicon-user"></i> <%= @user.nickname %>さんのプロフィール</p>
+      <p><i class="glyphicon glyphicon-user"></i> <%= current_user.nickname %>さんのプロフィール</p>
     </div>
     <hr>
     <div class="editBox2">
       <div class="editBox3">
-        <%= image_tag("#{@user.avatar}", height: "300px", width: "300px", class: "profile") %>
+        <%= image_tag("#{current_user.avatar}", height: "300px", width: "300px", class: "profile") %>
       </div>
       <div class="editBox4">
         <p class="text-center text-info">< 名前 ></p>
-        <p class="text-center"><%= @user.nickname %></p>
+        <p class="text-center"><%= @current_user.nickname %></p>
       </div>
       <div class="edEitBox5">
         <p class="text-center text-danger">< 性別 ></p>
-        <% if @user.gender == 1 %>
+        <% if current_user.gender == 1 %>
           <p class="text-center">男性 <i class="glyphicon glyphicon-sunglasses"></i></p>
         <% else %>
           <p class="text-center">女性 <i class="glyphicon glyphicon-heart-empty"></i></p>
@@ -22,7 +22,7 @@
       </div>
       <div class="editBox6">
         <p class="text-center text-success">< メールアドレス ></p>
-        <p class="text-center"><%= @user.email %></p>
+        <p class="text-center"><%= current_user.email %></p>
       </div>
     </div>
   </div>
