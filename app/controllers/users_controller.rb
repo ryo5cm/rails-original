@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
 
+  before_action :authenticate_user!
+
   def show
-    @user = current_user
     @pictures = current_user.pictures.page(params[:page]).per(20).order('created_at DESC')
   end
 
   def edit
-    @user = current_user
   end
 
   def update
