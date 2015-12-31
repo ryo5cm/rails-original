@@ -12,7 +12,7 @@
             <%= image_tag("#{@picture.image}", height: "550px", width: "400px", class: "userImage") %>
           </div>
           <% if user_signed_in? %>
-            <% if current_user.id == @picture.user_id %>
+            <% if current_user?(@picture.user) %>
               <div class="showBox4">
                 <%= link_to "編集する", picture_path(@picture.id), method: :patch %>
                 <%= link_to "削除する", picture_path(@picture.id), method: :delete %>
