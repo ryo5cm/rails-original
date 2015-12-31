@@ -25,6 +25,7 @@ class PicturesController < ApplicationController
 
   def create
     @picture = current_user.pictures.build(picture_params)
+    @picture.gender = current_user.gender
     if @picture.save
       redirect_to pictures_path, notice: "投稿が保存されました。"
     else
@@ -55,7 +56,7 @@ class PicturesController < ApplicationController
   end
 
   def picture_params
-    params.require(:picture).permit(:image, :comment)
+    params.require(:picture).permit(:image, :comment, :genre_id)
   end
 
 end
