@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   has_many :reviews
   has_many :pictures
+  has_many :likes
 
   validates :nickname, :password, :gender, presence: true
   validates :email, presence: true, uniqueness: true
