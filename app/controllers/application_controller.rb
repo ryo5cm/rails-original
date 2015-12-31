@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
     '/users/sign_in'
   end
 
+  include ApplicationHelper
+
   # deviseのstrong_parametersに新しく許可するパラメータを追加する必要がある
   # ここで、devise_parameter_sanitizerメソッドを直接before_actionに記述してはいけない。devise_parameter_sanitizerを呼び出すためのメソッドを作成してそのメソッドを呼び出すようにする。
   # devise_parameter_sanitizerメソッドはdeviseで追加されたメソッドなので、Deviseのコントローラ以外で呼び出すことができない。deviseコントローラーのアクションが動いた時のみ、configure_permitted_parametersを動かす処理を書く。
