@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :ranking, only: [:index, :show]
   resources :genre, only: :index
 
+  post "/like/:picture_id" => "likes#like", as: "like"
+  delete "/unlike/:picture_id" => "likes#unlike", as: "unlike"
+
   resources :pictures, only: [:index, :show, :new, :create, :update, :destroy] do
     resources :reviews, only: [:new, :create]
   end
