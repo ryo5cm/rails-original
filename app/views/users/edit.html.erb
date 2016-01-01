@@ -9,20 +9,23 @@
         <%= image_tag("#{current_user.avatar}", height: "300px", width: "300px", class: "profile") %>
       </div>
       <div class="editBox4">
-        <p class="text-center text-info">< 名前 ></p>
+        <p class="text-center text-info">ユーザー</p>
         <p class="text-center"><%= current_user.nickname %></p>
       </div>
       <div class="edEitBox5">
-        <p class="text-center text-danger">< 性別 ></p>
+        <p class="text-center text-danger">性別</p>
         <% if current_user.gender == 1 %>
-          <p class="text-center">男性 <i class="glyphicon glyphicon-sunglasses"></i></p>
+          <p class="text-center">男性</p>
         <% else %>
-          <p class="text-center">女性 <i class="glyphicon glyphicon-heart-empty"></i></p>
+          <p class="text-center">女性</p>
         <% end %>
       </div>
       <div class="editBox6">
-        <p class="text-center text-success">< メールアドレス ></p>
+        <p class="text-center text-success">メールアドレス</p>
         <p class="text-center"><%= current_user.email %></p>
+      </div>
+      <div class="editBox4">
+        <p class="text-center text-info"><%= current_user.likes.count %>個の投稿にいいね！しています</p>
       </div>
     </div>
   </div>
