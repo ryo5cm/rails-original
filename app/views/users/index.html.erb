@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="myBox1">
+    <div class="myBox2">
+      <h4>
+        <%= image_tag("#{current_user.avatar}", height: "70px", width: "70px") %> <%= current_user.nickname %>さんのマイページ <i class="glyphicon glyphicon-book"></i>
+      </h4>
+      <p><%= link_to "ユーザー情報", edit_user_path(current_user.id) %></p>
+    </div>
+    <hr>
+    <table class="table2">
+      <tr>
+        <td class="leftBox">
+          <%= link_to "投稿一覧", pictures_path, class: "postIndex" %>
+        </td>
+        <td class="rightBox"><%= link_to "いいね！一覧", pictures_path, class: "likeIndex" %>
+        </td>
+      </tr>
+    </table>
+    <div class="row">
+      <div class="myBox3 clearfix">
+        <div class="pictures">
+          <% @pictures.each do |picture| %>
+            <li class="list">
+              <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", height: "200px", width: "150px") %></a>
+            </li>
+          <% end %>
+        </div>
+      </div>
+      <div class="pagiNation row">
+        <div class="page col-md-12">
+          <%= paginate(@pictures) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

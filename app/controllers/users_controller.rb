@@ -3,8 +3,11 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :correct_user, only:[:edit, :update]
 
-  def show
+  def index
     @pictures = current_user.pictures.page(params[:page]).per(20).order('created_at DESC')
+  end
+
+  def show
   end
 
   def edit
