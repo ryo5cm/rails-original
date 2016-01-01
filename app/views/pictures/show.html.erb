@@ -30,7 +30,11 @@
         </div>
         <div class="showBox5 col-md-6">
           <dl>
-            <dt><%= link_to "いいね！", like_path(@picture.id), method: :post %></dt>
+            <% if current_user.likes.find_by(picture_id: @picture.id) %>
+              <dt>いいね！済み</dt>
+            <% else %>
+              <dt><%= link_to "いいね！", like_path(@picture.id), method: :post %></dt>
+            <% end %>
             <dt class="text-danger"><i class="glyphicon glyphicon-user"></i> 投稿者名</dt>
               <dd><%= @picture.user.nickname %></dd>
             <dt class="text-success"><i class="glyphicon glyphicon-th-large"></i> 性別</dt>
