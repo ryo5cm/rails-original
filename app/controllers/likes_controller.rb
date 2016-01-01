@@ -7,6 +7,8 @@ class LikesController < ApplicationController
   end
 
   def unlike
-
+    picture = Picture.find(params[:picture_id])
+    like = current_user.likes.find_by(picture_id: picture.id)
+    like.destroy
   end
 end
