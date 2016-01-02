@@ -16,8 +16,9 @@ class UsersController < ApplicationController
   def update
   end
 
-  def like_notes
-
+  def like_pictures
+    @pictures = current_user.like_picures
+    @title = "いいね！一覧"
   end
 
   private
