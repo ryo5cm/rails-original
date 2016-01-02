@@ -12,7 +12,7 @@
         <td class="leftBox">
           <%= link_to "投稿一覧", pictures_path, class: "postIndex" %>
         </td>
-        <td class="rightBox"><%= link_to "いいね！一覧", pictures_path, class: "likeIndex" %>
+        <td class="rightBox"><%= link_to "いいね！一覧", like_notes_user_path(current_user.id), class: "likeIndex" %>
         </td>
       </tr>
     </table>

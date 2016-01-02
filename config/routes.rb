@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pictures#index'
 
-  resources :users, only: [:index, :show, :edit, :update]
+  resources :users, only: [:index, :show, :edit, :update] do
+    member do
+      get :like_notes
+    end
+  end
+
   resources :ranking, only: [:index, :show]
   resources :genre, only: :index
 

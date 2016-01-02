@@ -16,6 +16,10 @@ class UsersController < ApplicationController
   def update
   end
 
+  def like_notes
+
+  end
+
   private
   def correct_user
     user = User.find(params[:id])
