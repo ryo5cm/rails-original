@@ -17,6 +17,9 @@ Rails.application.routes.draw do
 
   resources :pictures, only: [:index, :show, :new, :create, :update, :destroy] do
     resources :reviews, only: [:new, :create]
+    member do
+      get :liking_users
+    end
   end
 
 end
