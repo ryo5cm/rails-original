@@ -20,7 +20,6 @@ class UsersController < ApplicationController
 
   def like_pictures
     @pictures = current_user.like_pictures.page(params[:page]).per(50).order('created_at desc')
-    @title1 = "投稿一覧"
     @title2 = "いいね！した一覧"
     render :index
   end

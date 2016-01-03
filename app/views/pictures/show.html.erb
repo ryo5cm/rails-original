@@ -7,15 +7,14 @@
             <h4><%= notice %></h4>
             <h4><i class="glyphicon glyphicon-picture"></i> コーディネート情報</h4>
           </div>
-          <hr>
           <div class="showBox3">
             <%= image_tag("#{@picture.image}", height: "550px", width: "400px", class: "userImage") %>
           </div>
           <% if user_signed_in? %>
             <% if current_user?(@picture.user) %>
               <div class="showBox4">
-                <%= link_to "編集する", picture_path(@picture.id), method: :patch %>
-                <%= link_to "削除する", picture_path(@picture.id), method: :delete %>
+                <%= link_to "編集する", picture_path(@picture.id), method: :patch, class: "edit" %>
+                <%= link_to "削除する", picture_path(@picture.id), method: :delete, class: "delete" %>
               </div>
             <% else %>
               <div class="showBox4">
