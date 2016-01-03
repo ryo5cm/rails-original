@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    if @picture.create(create_params)
+    if Review.create(create_params)
       redirect_to picture_path(@picture)
     else
       render :new

@@ -1,27 +1,31 @@
 <div class="container">
-  <div class="myBox1">
-    <div class="myBox2">
-      <h4>
-        <%= image_tag("#{current_user.avatar}", height: "70px", width: "70px") %> <%= current_user.nickname %>さんのマイページ <i class="glyphicon glyphicon-book"></i>
-      </h4>
-      <p><%= link_to "#{@title1}", pictures_path %></p>
-      <p><%= link_to "ユーザー情報", edit_user_path(current_user.id) %></p>
+  <div class="editBox1">
+    <div>
+      <p><i class="glyphicon glyphicon-user"></i> <%= current_user.nickname %>さんのプロフィール</p>
     </div>
     <hr>
-    <div class="row">
-      <div class="myBox3 clearfix">
-        <div class="pictures">
-          <% @pictures.each do |picture| %>
-            <li class="list">
-              <a href="/pictures/<%= picture.id %>"><%= image_tag("#{picture.image}", height: "200px", width: "150px") %></a>
-            </li>
-          <% end %>
-        </div>
+    <div class="editBox2">
+      <div class="editBox3">
+        <%= image_tag("#{current_user.avatar}", height: "300px", width: "300px", class: "profile") %>
       </div>
-      <div class="pagiNation row">
-        <div class="page col-md-12">
-          <%= paginate(@pictures) %>
-        </div>
+      <div class="editBox4">
+        <p class="text-center text-info">ユーザー</p>
+        <p class="text-center"><%= current_user.nickname %></p>
+      </div>
+      <div class="edEitBox5">
+        <p class="text-center text-danger">性別</p>
+        <% if current_user.gender == 1 %>
+          <p class="text-center">男性</p>
+        <% else %>
+          <p class="text-center">女性</p>
+        <% end %>
+      </div>
+      <div class="editBox6">
+        <p class="text-center text-success">メールアドレス</p>
+        <p class="text-center"><%= current_user.email %></p>
+      </div>
+      <div class="editBox4">
+        <p class="text-center text-info"><%= current_user.likes.count %>個の投稿にいいね！しています</p>
       </div>
     </div>
   </div>
