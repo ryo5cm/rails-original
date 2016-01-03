@@ -34,7 +34,7 @@
             <% else %>
               <dt><%= link_to "いいね！", like_path(@picture.id), method: :post %></dt>
             <% end %>
-            <dt><%= @picture.likes.count %> いいね！</dt>
+            <dt><%= link_to @picture.likes.count, liking_users_picture_path(@picture.id), class: "like" %> いいね！</dt>
             <dt class="text-danger"><i class="glyphicon glyphicon-user"></i> 投稿者名</dt>
               <dd><%= @picture.user.nickname %></dd>
             <dt class="text-success"><i class="glyphicon glyphicon-th-large"></i> 性別</dt>

@@ -6,7 +6,7 @@ class Picture < ActiveRecord::Base
   belongs_to :genre
   has_many :likes
 
-  has_many :liking_users
+  has_many :liking_users, through: :likes, source: :user
 
   has_attached_file :image,
         styles: { medium: "100x100#", thumb: "100x100#" }

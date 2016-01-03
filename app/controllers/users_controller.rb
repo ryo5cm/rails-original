@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def index
     @pictures = current_user.pictures.page(params[:page]).per(50).order('created_at DESC')
-    @title1 = "いいね！した一覧"
+    @title1 = "いいね！した投稿"
     @title2 = "投稿一覧"
   end
 
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def like_pictures
     @pictures = current_user.like_pictures.page(params[:page]).per(50).order('created_at desc')
-    @title2 = "いいね！した一覧"
+    @title2 = "いいね！した投稿"
     render :index
   end
 
