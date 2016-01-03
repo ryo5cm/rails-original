@@ -4,11 +4,11 @@
       <h4>
         <%= image_tag("#{current_user.avatar}", height: "70px", width: "70px") %> <%= current_user.nickname %>さんのマイページ <i class="glyphicon glyphicon-book"></i>
       </h4>
-      <p><%= link_to "いいね！一覧", like_notes_user_path(current_user.id) %></p>
+      <p><%= link_to "#{@title1}", like_pictures_user_path(current_user.id) %></p>
       <p><%= link_to "ユーザー情報", edit_user_path(current_user.id) %></p>
     </div>
     <div class="row">
-      <p class="text-center">投稿一覧</p>
+      <p class="text-center"><%= @title2 %></p>
       <div class="myBox3 clearfix">
         <div class="pictures">
           <% @pictures.each do |picture| %>

@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   has_many :reviews
   has_many :pictures
   has_many :likes
-  has_many :like_pictures, through: :likes, source: :pictures
+  has_many :like_pictures, through: :likes, source: :picture
 
   validates :nickname, :password, :gender, presence: true
   validates :email, presence: true, uniqueness: true

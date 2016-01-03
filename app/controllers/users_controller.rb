@@ -4,7 +4,9 @@ class UsersController < ApplicationController
   before_action :correct_user, only:[:edit, :update]
 
   def index
-    @pictures = current_user.pictures.page(params[:page]).per(20).order('created_at DESC')
+    @pictures = current_user.pictures.page(params[:page]).per(50).order('created_at DESC')
+    @title1 = "いいね！した一覧"
+    @title2 = "投稿一覧"
   end
 
   def show
@@ -17,8 +19,10 @@ class UsersController < ApplicationController
   end
 
   def like_pictures
-    @pictures = current_user.like_picures
-    @title = "いいね！一覧"
+    @pictures = current_user.like_pictures.page(params[:page]).per(50).order('created_at desc')
+    @title1 = "投稿一覧"
+    @title2 = "いいね！した一覧"
+    render :index
   end
 
   private

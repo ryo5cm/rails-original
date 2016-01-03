@@ -5,15 +5,15 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :edit, :update] do
     member do
-      get :like_notes
+      get :like_pictures
     end
   end
 
   resources :ranking, only: [:index, :show]
   resources :genre, only: :index
 
-  post "/like/:picture_id" => "likes#like", as: "like"
-  delete "/unlike/:picture_id" => "likes#unlike", as: "unlike"
+  post "like/:picture_id" => "likes#like", as: "like"
+  delete "unlike/:picture_id" => "likes#unlike", as: "unlike"
 
   resources :pictures, only: [:index, :show, :new, :create, :update, :destroy] do
     resources :reviews, only: [:new, :create]
